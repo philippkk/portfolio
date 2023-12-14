@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Projects from "./projects";
 import About from "./about";
-import pfp from "./LOGO.jpg";
+import pfp from "./logowhite.svg";
 function App() {
   const [state, setState] = useState(0);
 
@@ -33,12 +33,22 @@ function App() {
 
 const NavBar = ({ button }) => {
   return (
-    <div className="fixed top-0 left-0 right-0 bg-stone-800/90 w-screen h-24 overscroll-none ">
-      <div className="flex items-center justify-center">
-      
-        <h1 className="text-blue-200">rawr</h1>
-        <img className="w-20 m-2 rounded-2xl" src={pfp} />
-        <button onClick={button}>CLICK</button>
+    <div className="fixed top-0 left-0 right-0 bg-stone-800/90 w-screen h-24 overscroll-none  shadow-stone-800/50 transform hover:bg-stone-800 motion-reduce:transform-none transition duration-250 ease-in-out shadow-lg hover:shadow-blue-500/40">
+      <div className="flex items-center justify-center">      
+        <button className="mx-10 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-extrabold py-3 px-6 rounded-full transform hover:scale-[125%] motion-reduce:transform-none transition duration-250 ease-in-out shadow-lg hover:shadow-blue-500/40"
+          onClick={button}>click</button>
+        <button className="mx-10  bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-extrabold py-3 px-6 rounded-full transform hover:scale-[125%] motion-reduce:transform-none transition duration-250 ease-in-out shadow-lg hover:shadow-blue-500/40"
+          onClick={button}>click</button>
+        <button>
+        <img className="w-20 m-2 rounded-2xl white transform hover:scale-[125%] motion-reduce:transform-none transition duration-250 ease-in-out shadow-lg "
+         src={pfp} 
+         onClick={button}/>
+        </button>
+        
+        <button className="mx-10 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-extrabold py-3 px-6 rounded-full transform hover:scale-[125%] motion-reduce:transform-none transition duration-250 ease-in-out shadow-lg hover:shadow-blue-500/40"
+          onClick={button}>click</button>
+        <button className="mx-10 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white font-extrabold py-3 px-6 rounded-full transform hover:scale-[125%] motion-reduce:transform-none transition duration-250 ease-in-out shadow-lg hover:shadow-blue-500/40"
+          onClick={button}>click</button>
       </div>
     </div>
   );
